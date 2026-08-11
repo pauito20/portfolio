@@ -34,22 +34,29 @@ export function GraphRoot() {
     <group ref={groupRef}>
       <Edges />
       {tier !== "low" && <DataPulses />}
+      {/* Núcleo: azules de la familia BC, degradado con flujo lento y rim
+          cian — evoca una superficie de cinta fluida sin reproducir ninguna
+          marca registrada. */}
       <NodesInstanced
         nodes={core}
-        color="#22d3ee"
-        geometry="icosahedron"
-        radius={0.55}
+        color="#1668c4"
+        gradientTo="#5ec8f5"
+        rimColor="#22d3ee"
+        flow
+        radius={0.62}
       />
       <NodesInstanced
         nodes={erp}
         color="#0078d4"
-        geometry="icosahedron"
+        gradientTo="#4aa8ea"
+        rimColor="#7fd4ff"
         radius={0.4}
       />
       <NodesInstanced
         nodes={ai}
         color="#7b61ff"
-        geometry="octahedron"
+        gradientTo="#a78bfa"
+        rimColor="#c4b5fd"
         radius={0.42}
       />
     </group>

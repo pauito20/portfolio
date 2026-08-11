@@ -12,8 +12,42 @@
   --color-ink-dim: #9aa5b1;
   --color-border: #1f2733;
 
-  --font-sans: "Inter var", system-ui, "Segoe UI", Roboto, sans-serif;
+  /* -apple-system/BlinkMacSystemFont resuelven a San Francisco de forma nativa
+     y gratuita en macOS/iOS (el propio SO la sirve, no se descarga nada
+     nuestro). En cualquier otra plataforma cae en Inter Variable
+     (autohospedada, ver src/main.tsx) — métricamente muy cercana a SF Pro. */
+  --font-sans: -apple-system, BlinkMacSystemFont, "Inter Variable", "Segoe UI",
+    Roboto, Helvetica, Arial, sans-serif;
   --font-mono: ui-monospace, "Cascadia Code", Consolas, monospace;
+
+  /* Escala tipográfica: titulares grandes y fluidos con tracking negativo
+     (combinar con tracking-tight/tighter en el componente), cuerpo con
+     leading generoso. Cada --text-* trae su --line-height emparejado, que
+     es el único sufijo que Tailwind v4 encadena automáticamente. */
+  --text-hero: clamp(2.75rem, 1.15rem + 6.6vw, 5.5rem);
+  --text-hero--line-height: 1.02;
+
+  --text-display: clamp(2.25rem, 1.1rem + 4.4vw, 3.75rem);
+  --text-display--line-height: 1.06;
+
+  --text-headline: clamp(1.875rem, 1.05rem + 2.7vw, 2.75rem);
+  --text-headline--line-height: 1.1;
+
+  --text-title: 1.375rem;
+  --text-title--line-height: 1.25;
+
+  --text-lead: clamp(1.125rem, 0.95rem + 0.6vw, 1.375rem);
+  --text-lead--line-height: 1.45;
+
+  --text-eyebrow: 0.75rem;
+  --text-eyebrow--line-height: 1.2;
+
+  /* Ritmo vertical entre secciones/bloques, estilo Apple: mucho whitespace. */
+  --spacing-section: clamp(6rem, 11vh, 10rem);
+  --spacing-block: clamp(2.5rem, 5vh, 4.5rem);
+
+  /* Curva expo-out: arranque rápido, frenada larga — la firma del scroll de Apple. */
+  --ease-reveal: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 @layer base {
@@ -37,8 +71,13 @@
     background: var(--color-bg);
     color: var(--color-ink);
     font-family: var(--font-sans);
+    font-size: 1.0625rem; /* 17px, como el cuerpo de texto de apple.com */
+    line-height: 1.62;
+    letter-spacing: -0.006em;
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
+    font-synthesis-weight: none; /* evita el "falso bold" mientras Inter Variable carga */
   }
 
   ::selection {

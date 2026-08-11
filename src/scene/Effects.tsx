@@ -7,7 +7,9 @@ export function Effects() {
   if (tier !== "high") return null;
 
   return (
-    <EffectComposer multisampling={0}>
+    // multisampling=4: con esferas lisas el aliasing del contorno curvo se
+    // nota mucho más que en los poliedros facetados de antes.
+    <EffectComposer multisampling={4}>
       <Bloom
         mipmapBlur
         intensity={0.7}

@@ -13,6 +13,7 @@ export const projects: Project[] = [
     },
     tags: ["Electron", "React", "TypeScript", "Dynamics NAV"],
     year: "2026",
+    link: "https://github.com/pauito20/cal-cross-reference-analyzer",
     nodeId: "ai.migration",
   },
   {

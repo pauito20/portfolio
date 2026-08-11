@@ -18,7 +18,7 @@ export function Experience({
       ariaLabel={t("experience.title")}
     >
       <Reveal>
-        <h2 className="text-3xl font-semibold text-ink">
+        <h2 className="text-headline font-semibold tracking-tight text-ink">
           {t("experience.title")}
         </h2>
       </Reveal>

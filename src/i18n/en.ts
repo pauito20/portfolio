@@ -17,8 +17,8 @@ export const en = {
   hero: {
     kicker: "Business Central · AL · Applied AI",
     name: "Pau Gargallo Llorens",
-    role: "Software Analyst & Architect",
-    subrole: "Dynamics 365 Business Central & Applied AI",
+    role: "Microsoft Dynamics 365 Business Central Developer & Consultant",
+    subrole: "+ AI applied to ERP",
     pitch:
       "Four years shipping ERP in production for the Spanish public sector — 80+ AL extensions across 8 organizations — plus an AI master’s degree bridging that world with LLM agents, MCP, and automation.",
     ctaProjects: "View projects",

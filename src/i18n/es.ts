@@ -16,8 +16,8 @@ export const es = {
   hero: {
     kicker: "Business Central · AL · IA aplicada",
     name: "Pau Gargallo Llorens",
-    role: "Analista y arquitecto de software",
-    subrole: "Dynamics 365 Business Central & IA aplicada",
+    role: "Desarrollador y consultor en Dynamics 365 Business Central",
+    subrole: "+ IA aplicada a ERP",
     pitch:
       "Cuatro años entregando ERP en producción para el sector público español — más de 80 extensiones AL en 8 organismos — y un máster en IA que conecta ese mundo con agentes LLM, MCP y automatización.",
     ctaProjects: "Ver proyectos",

@@ -12,7 +12,7 @@ export function Timeline({ items }: { items: ExperienceItem[] }) {
           <p className="text-xs tracking-wide text-ink-dim uppercase">
             {tl(item.period)}
           </p>
-          <h3 className="mt-1 text-base font-semibold text-ink">
+          <h3 className="text-title mt-1 font-semibold tracking-tight text-ink">
             {tl(item.role)}
           </h3>
           <p className="text-sm text-ink-dim">

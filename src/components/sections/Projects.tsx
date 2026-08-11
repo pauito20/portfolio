@@ -18,18 +18,20 @@ export function Projects({
       ariaLabel={t("projects.title")}
     >
       <Reveal>
-        <h2 className="text-3xl font-semibold text-ink">
+        <h2 className="text-headline font-semibold tracking-tight text-ink">
           {t("projects.title")}
         </h2>
-        <p className="mt-2 text-ink-dim">{t("projects.subtitle")}</p>
+        <p className="mt-2 leading-relaxed text-ink-dim">
+          {t("projects.subtitle")}
+        </p>
       </Reveal>
-      <div className="mt-10 grid gap-5">
-        {projects.map((project, i) => (
-          <Reveal key={project.id} delay={i * 0.05}>
+      <Reveal stagger={0.1} className="mt-10 grid gap-5">
+        {projects.map((project) => (
+          <Reveal.Item key={project.id}>
             <ProjectCard project={project} />
-          </Reveal>
+          </Reveal.Item>
         ))}
-      </div>
+      </Reveal>
     </Section>
   );
 }

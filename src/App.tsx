@@ -2,6 +2,8 @@ import { useRef } from "react";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { SkipLink } from "@/components/layout/SkipLink";
+import { AmbientBackground } from "@/components/ui/AmbientBackground";
+import { TileGrid } from "@/components/ui/TileGrid";
 import { Hero } from "@/components/sections/Hero";
 import { About } from "@/components/sections/About";
 import { Experience } from "@/components/sections/Experience";
@@ -15,10 +17,12 @@ export default function App() {
 
   return (
     <>
+      <AmbientBackground />
       <SkipLink />
       <Header />
       <main id="main">
         <Hero registerRef={register("hero")} tooltipRef={tooltipRef} />
+        <TileGrid />
         <About registerRef={register("about")} />
         <Experience registerRef={register("experience")} />
         <Expertise registerRef={register("expertise")} />

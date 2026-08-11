@@ -1,7 +1,10 @@
 /**
- * Fallback estático: sin WebGL2, tier "low" en un móvil de gama baja con
- * reduced-motion, o mientras el chunk de three/r3f todavía está cargando.
- * Sin animación, sin coste — un halo CSS que sugiere el grafo sin serlo.
+ * Fallback estático. Se muestra únicamente cuando: no hay WebGL2, o el
+ * usuario prefiere movimiento reducido (preferencia del sistema o toggle
+ * manual) — nunca por tener un tier de dispositivo bajo. En móvil de gama
+ * baja el Canvas 3D real sigue montándose, solo con menos nodos y sin
+ * pulsos/bloom (ver `GraphRoot.tsx`/`Effects.tsx`). Sin animación, sin
+ * coste — un halo CSS que sugiere el grafo sin serlo.
  */
 export function Fallback() {
   return (

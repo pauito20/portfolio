@@ -24,14 +24,27 @@ export function SceneCanvas({
   const setReducedMotion = useSceneStore((s) => s.setReducedMotion);
   const setTier = useSceneStore((s) => s.setTier);
 
-  // Semilla única al montar: preferencia del sistema y tier heurístico del dispositivo.
-  // A partir de aquí, el toggle manual (MotionToggle) y PerformanceMonitor tienen la última palabra.
+  // El tier heurístico del dispositivo se calcula una sola vez al montar.
+  // A partir de aquí, PerformanceMonitor tiene la última palabra (solo puede bajarlo).
   useEffect(() => {
-    setReducedMotion(systemReducedMotion);
     setTier(detectInitialTier());
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  // El store ya nace con el valor correcto de reduced-motion (lectura síncrona
+  // de matchMedia en useSceneStore.ts) — esto solo mantiene el store al día si
+  // el usuario cambia la preferencia del SO mientras la página está abierta.
+  // El toggle manual (MotionToggle) no se pisa: este efecto solo escribe
+  // cuando `systemReducedMotion` cambia de verdad, nunca en cada render.
+  useEffect(() => {
+    setReducedMotion(systemReducedMotion);
+  }, [systemReducedMotion, setReducedMotion]);
+
+  // Importante: el tier NUNCA decide este fallback. En móvil (tier "low") el
+  // Canvas 3D se sigue montando siempre — solo se reduce el nº de nodos y se
+  // desactivan pulsos/bloom (ver GraphRoot.tsx / Effects.tsx). El fallback
+  // estático es exclusivamente para: sin WebGL2, o movimiento reducido
+  // (preferencia del sistema o toggle manual).
   if (!webglSupported || reducedMotion) {
     return <Fallback />;
   }

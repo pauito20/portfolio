@@ -19,10 +19,12 @@ export function Footer({
         className="text-center"
       >
         <Reveal>
-          <h2 className="text-3xl font-semibold text-ink">
+          <h2 className="text-headline font-semibold tracking-tight text-ink">
             {t("contact.title")}
           </h2>
-          <p className="mt-2 text-ink-dim">{t("contact.pitch")}</p>
+          <p className="mt-2 leading-relaxed text-ink-dim">
+            {t("contact.pitch")}
+          </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <a
               href={`mailto:${profile.email}`}

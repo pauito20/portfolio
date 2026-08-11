@@ -3,6 +3,16 @@ import type { SectionId } from "@/types/content";
 
 export type DeviceTier = "low" | "mid" | "high";
 
+/**
+ * Leído de forma síncrona en la creación del store (no en un useEffect
+ * posterior): así un usuario con reduced-motion nunca ve el Canvas 3D
+ * montarse y desmontarse de golpe en favor del fallback estático.
+ */
+function detectInitialReducedMotion(): boolean {
+  if (typeof window === "undefined") return false;
+  return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+}
+
 interface SceneState {
   activeSection: SectionId;
   hoveredNodeId: string | null;
@@ -24,7 +34,7 @@ export const useSceneStore = create<SceneState>((set, get) => ({
   hoveredNodeId: null,
   focusedNodeId: null,
   tier: "high",
-  reducedMotion: false,
+  reducedMotion: detectInitialReducedMotion(),
   canvasVisible: true,
 
   setActiveSection: (id) => {

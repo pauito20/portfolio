@@ -21,7 +21,7 @@ export function Section({
       id={id}
       ref={registerRef}
       aria-label={ariaLabel}
-      className={`relative mx-auto w-full max-w-4xl scroll-mt-24 px-6 py-24 sm:px-8 ${className}`}
+      className={`relative mx-auto w-full max-w-3xl scroll-mt-24 px-6 py-section sm:px-8 ${className}`}
     >
       {children}
     </section>

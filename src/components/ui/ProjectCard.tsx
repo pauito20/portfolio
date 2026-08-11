@@ -19,10 +19,14 @@ export function ProjectCard({ project }: { project: Project }) {
         : {})}
     >
       <div className="flex items-baseline justify-between gap-4">
-        <h3 className="text-lg font-semibold text-ink">{tl(project.title)}</h3>
+        <h3 className="text-title font-semibold tracking-tight text-ink">
+          {tl(project.title)}
+        </h3>
         <span className="shrink-0 text-xs text-ink-dim">{project.year}</span>
       </div>
-      <p className="mt-2 text-sm text-ink-dim">{tl(project.summary)}</p>
+      <p className="mt-2 leading-relaxed text-sm text-ink-dim">
+        {tl(project.summary)}
+      </p>
       <div className="mt-4 flex flex-wrap gap-2">
         {project.tags.map((tag) => (
           <Tag key={tag}>{tag}</Tag>
