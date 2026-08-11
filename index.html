@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0a0e17" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <title>Pau Gargallo Llorens — Business Central & IA aplicada</title>
+    <meta
+      name="description"
+      content="Analista y arquitecto de software especializado en Microsoft Dynamics 365 Business Central (AL) e IA aplicada a ERP. Migraciones NAV → BC, agentes LLM y MCP."
+    />
+    <link rel="canonical" href="https://pauito20.github.io/portfolio/" />
+
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Pau Gargallo Llorens — Business Central & IA aplicada"
+    />
+    <meta
+      property="og:description"
+      content="Analista y arquitecto de software especializado en Microsoft Dynamics 365 Business Central (AL) e IA aplicada a ERP."
+    />
+    <meta property="og:image" content="/og.png" />
+    <meta property="og:url" content="https://pauito20.github.io/portfolio/" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Pau Gargallo Llorens",
+        "jobTitle": "Business Central Developer / AI",
+        "worksFor": { "@type": "Organization", "name": "Lãberit" },
+        "url": "https://pauito20.github.io/portfolio/",
+        "sameAs": ["https://www.linkedin.com/in/pau-gargallo-llorens/"],
+        "knowsAbout": [
+          "Microsoft Dynamics 365 Business Central",
+          "AL",
+          "Dynamics NAV migration",
+          "Deep Reinforcement Learning",
+          "Model Context Protocol"
+        ]
+      }
+    </script>
+
+    <script>
+      // Anti-flash: fija el idioma antes del primer paint, sin esperar a React.
+      try {
+        var stored = localStorage.getItem("pgl.locale");
+        var locale = stored === "en" || stored === "es" ? stored : "es";
+        document.documentElement.lang = locale;
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
