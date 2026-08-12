@@ -9,7 +9,7 @@ import { pulseFragmentShader, pulseVertexShader } from "./materials/glsl";
 const PULSES_PER_EDGE = 2;
 const GROUP_COLOR: Record<string, string> = {
   erp: "#4aa8ea",
-  ai: "#a78bfa",
+  ai: "#5eead4",
   core: "#67e8f9",
 };
 

@@ -3,16 +3,6 @@ import type { SectionId } from "@/types/content";
 
 export type DeviceTier = "low" | "mid" | "high";
 
-/**
- * Leído de forma síncrona en la creación del store (no en un useEffect
- * posterior): así un usuario con reduced-motion nunca ve el Canvas 3D
- * montarse y desmontarse de golpe en favor del fallback estático.
- */
-function detectInitialReducedMotion(): boolean {
-  if (typeof window === "undefined") return false;
-  return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-}
-
 interface SceneState {
   activeSection: SectionId;
   hoveredNodeId: string | null;
@@ -34,7 +24,11 @@ export const useSceneStore = create<SceneState>((set, get) => ({
   hoveredNodeId: null,
   focusedNodeId: null,
   tier: "high",
-  reducedMotion: detectInitialReducedMotion(),
+  // Animado por defecto en cualquier dispositivo, incluido móvil — no se
+  // hereda de `prefers-reduced-motion` del sistema. Solo el toggle manual
+  // (MotionToggle) o `setReducedMotion` lo desactivan. Decisión explícita del
+  // propietario del sitio, no la recomendación general de accesibilidad.
+  reducedMotion: false,
   canvasVisible: true,
 
   setActiveSection: (id) => {

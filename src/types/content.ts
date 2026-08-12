@@ -28,6 +28,8 @@ export interface Certification {
   name: string;
   issuer: string;
   date: string;
+  /** Página oficial de la certificación o del curso (verificado, no una insignia personal). */
+  url?: string;
 }
 
 export interface SkillGroup {

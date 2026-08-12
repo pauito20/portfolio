@@ -2,9 +2,9 @@ import type { Dict } from "./dictionary";
 
 export const en = {
   meta: {
-    title: "Pau Gargallo Llorens — Business Central & Applied AI",
+    title: "Pau Gargallo Llorens · Business Central & Applied AI",
     description:
-      "Software analyst and architect specialized in Microsoft Dynamics 365 Business Central (AL) and AI applied to ERP.",
+      "Microsoft Dynamics 365 Business Central (AL) developer and consultant, with AI applied to ERP.",
   },
   nav: {
     about: "About",
@@ -18,9 +18,9 @@ export const en = {
     kicker: "Business Central · AL · Applied AI",
     name: "Pau Gargallo Llorens",
     role: "Microsoft Dynamics 365 Business Central Developer & Consultant",
-    subrole: "+ AI applied to ERP",
+    subrole: "With a specialization in AI applied to ERP",
     pitch:
-      "Four years shipping ERP in production for the Spanish public sector — 80+ AL extensions across 8 organizations — plus an AI master’s degree bridging that world with LLM agents, MCP, and automation.",
+      "Four years shipping ERP in production for the Spanish public sector, with more than 80 AL extensions across 8 organizations, along with an AI master’s degree bridging that world with LLM agents, MCP, and automation.",
     ctaProjects: "View projects",
     ctaContact: "Let's talk",
     ctaCv: "Download CV",
@@ -28,15 +28,15 @@ export const en = {
   },
   about: {
     title: "About me",
-    p1: "I develop and architect solutions on Microsoft Dynamics 365 Business Central at Lãberit since 2022, focused on full-lifecycle NAV → BC migrations for port authorities and public bodies: legacy C/AL customization analysis, re-engineering into AL extensions, data migration, and post-go-live support.",
+    p1: "I develop and architect solutions on Microsoft Dynamics 365 Business Central at Lãberit since 2022, focused on full-lifecycle NAV to Business Central migrations for port authorities and public bodies: legacy C/AL customization analysis, re-engineering into AL extensions, data migration, and post-go-live support.",
     p2: "I’m finishing an AI master’s degree at Universidad Europea in 2026, focused on LLM agents and automation applied to enterprise management: Copilot extensibility, MCP servers for BC, and AI-assisted migration tooling.",
-    p3: "Before all this, I completed a professional degree in Clarinet at the Castellón Conservatory alongside my degree and job — the same underlying discipline, applied to something very different.",
+    p3: "Before all this, I completed a professional degree in Clarinet at the Castellón Conservatory alongside my degree and job, the same underlying discipline applied to something very different.",
     factsTitle: "By the numbers",
     facts: {
       years: "4 years shipping ERP in production",
-      extensions: "80+ AL extensions maintained in production",
+      extensions: "More than 80 AL extensions maintained in production",
       orgs: "8 public-sector organizations",
-      cert: "4 Microsoft certifications + 4 Anthropic (Claude API, MCP, Agent Skills)",
+      cert: "4 Microsoft certifications and 4 from Anthropic, including Claude API, MCP, and Agent Skills",
     },
   },
   experience: {
@@ -55,7 +55,7 @@ export const en = {
   },
   contact: {
     title: "Let's talk",
-    pitch: "Open to new opportunities — on-site, hybrid, or remote, in Spain.",
+    pitch: "Open to new opportunities, both in Spain and remotely.",
     email: "Email",
     linkedin: "LinkedIn",
     location: "Benicàssim, Valencian Community, Spain",

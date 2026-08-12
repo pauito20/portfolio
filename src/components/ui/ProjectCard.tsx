@@ -37,9 +37,9 @@ export function ProjectCard({ project }: { project: Project }) {
           href={project.link}
           target="_blank"
           rel="noreferrer"
-          className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-erp-soft hover:text-glow"
+          className="mt-4 inline-flex items-center text-sm font-medium text-erp-soft underline decoration-erp-soft/40 underline-offset-4 transition hover:text-glow hover:decoration-glow/60"
         >
-          {t("projects.viewRepo")} →
+          {t("projects.viewRepo")}
         </a>
       )}
     </Card>

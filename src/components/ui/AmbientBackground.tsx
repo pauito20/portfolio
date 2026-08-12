@@ -26,7 +26,7 @@ export function AmbientBackground() {
         style={{
           background:
             "radial-gradient(50% 40% at 15% 15%, color-mix(in srgb, #0078d4 16%, transparent), transparent 70%), " +
-            "radial-gradient(45% 40% at 85% 30%, color-mix(in srgb, #7b61ff 14%, transparent), transparent 70%), " +
+            "radial-gradient(45% 40% at 85% 30%, color-mix(in srgb, #14b8a6 14%, transparent), transparent 70%), " +
             "radial-gradient(60% 45% at 50% 95%, color-mix(in srgb, #22d3ee 10%, transparent), transparent 70%)",
         }}
       />

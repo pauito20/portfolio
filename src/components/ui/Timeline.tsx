@@ -20,10 +20,11 @@ export function Timeline({ items }: { items: ExperienceItem[] }) {
           </p>
           <ul className="mt-3 space-y-2">
             {item.bullets.map((bullet, i) => (
-              <li key={i} className="flex gap-2 text-sm text-ink-dim">
-                <span aria-hidden className="text-ai-soft">
-                  ›
-                </span>
+              <li key={i} className="flex gap-2.5 text-sm text-ink-dim">
+                <span
+                  aria-hidden
+                  className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-ai-soft"
+                />
                 {tl(bullet)}
               </li>
             ))}

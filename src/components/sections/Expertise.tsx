@@ -74,15 +74,29 @@ export function Expertise({
             {t("expertise.certifications")}
           </h3>
           <ul className="mt-3 flex flex-wrap gap-2">
-            {certifications.map((cert) => (
-              <li
-                key={cert.id}
-                className="rounded-full border border-border bg-bg/60 px-3 py-1 text-xs text-ink-dim"
-                title={cert.issuer}
-              >
-                {cert.name}
-              </li>
-            ))}
+            {certifications.map((cert) =>
+              cert.url ? (
+                <li key={cert.id}>
+                  <a
+                    href={cert.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    title={cert.issuer}
+                    className="rounded-full border border-border bg-bg/60 px-3 py-1 text-xs text-ink-dim transition hover:border-glow hover:text-ink"
+                  >
+                    {cert.name}
+                  </a>
+                </li>
+              ) : (
+                <li
+                  key={cert.id}
+                  className="rounded-full border border-border bg-bg/60 px-3 py-1 text-xs text-ink-dim"
+                  title={cert.issuer}
+                >
+                  {cert.name}
+                </li>
+              ),
+            )}
           </ul>
         </div>
       </Reveal>

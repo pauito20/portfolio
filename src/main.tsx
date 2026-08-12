@@ -12,7 +12,10 @@ import { LocaleProvider } from "./i18n/LocaleProvider.tsx";
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <LocaleProvider>
-      <MotionConfig reducedMotion="user">
+      {/* reducedMotion no se especifica: framer-motion anima siempre por
+          defecto (decisión explícita, no hereda prefers-reduced-motion del
+          sistema) — coherente con el Canvas 3D, ver useSceneStore.ts. */}
+      <MotionConfig>
         <App />
       </MotionConfig>
     </LocaleProvider>

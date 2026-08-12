@@ -19,8 +19,8 @@ export const graphNodes: GraphNode[] = [
     group: "core",
     label: { es: "IA aplicada", en: "Applied AI" },
     blurb: {
-      es: "Máster en IA — agentes, MCP y automatización para ERP.",
-      en: "AI master’s degree — agents, MCP, and automation for ERP.",
+      es: "Máster en IA, centrado en agentes, MCP y automatización para ERP.",
+      en: "AI master’s degree, focused on agents, MCP, and automation for ERP.",
     },
     sectionId: "expertise",
     weight: 1,
@@ -107,8 +107,8 @@ export const graphNodes: GraphNode[] = [
     group: "erp",
     label: { es: "Extensiones AL", en: "AL extensions" },
     blurb: {
-      es: "80+ extensiones AL mantenidas en producción.",
-      en: "80+ AL extensions maintained in production.",
+      es: "Más de 80 extensiones AL mantenidas en producción.",
+      en: "More than 80 AL extensions maintained in production.",
     },
     sectionId: "expertise",
     weight: 0.8,
@@ -117,7 +117,7 @@ export const graphNodes: GraphNode[] = [
   {
     id: "erp.migration",
     group: "erp",
-    label: { es: "Migraciones NAV → BC", en: "NAV → BC migrations" },
+    label: { es: "Migración de NAV a BC", en: "NAV to BC migration" },
     blurb: {
       es: "Ciclo de vida completo: análisis, reingeniería, datos, hipersoporte.",
       en: "Full lifecycle: analysis, re-engineering, data, hypercare.",
@@ -132,8 +132,8 @@ export const graphNodes: GraphNode[] = [
     group: "ai",
     label: { es: "Agentes LLM", en: "LLM agents" },
     blurb: {
-      es: "Lenguaje natural sobre datos ERP — ERP SmartAgent.",
-      en: "Natural language over ERP data — ERP SmartAgent.",
+      es: "Lenguaje natural sobre datos ERP, en el proyecto ERP SmartAgent.",
+      en: "Natural language over ERP data, in the ERP SmartAgent project.",
     },
     sectionId: "projects",
     weight: 0.75,
@@ -156,8 +156,8 @@ export const graphNodes: GraphNode[] = [
     group: "ai",
     label: { es: "Migración asistida por LLM", en: "LLM-assisted migration" },
     blurb: {
-      es: "Análisis de C/AL heredado asistido por IA — NAV Where Used.",
-      en: "AI-assisted analysis of legacy C/AL — NAV Where Used.",
+      es: "Análisis de C/AL heredado asistido por IA, en el proyecto NAV Where Used.",
+      en: "AI-assisted analysis of legacy C/AL, in the NAV Where Used project.",
     },
     sectionId: "projects",
     weight: 0.65,

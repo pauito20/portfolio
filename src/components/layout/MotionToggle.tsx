@@ -15,6 +15,9 @@ export function MotionToggle() {
       title={t("a11y.motionToggle")}
       className="flex h-9 w-9 items-center justify-center rounded-full border border-border text-ink-dim transition hover:border-glow hover:text-ink"
     >
+      {/* Deliberadamente NO un icono de sol/luna (se confunde con un toggle de
+          tema claro/oscuro). Barras "en movimiento" vs "planas": mismo par de
+          formas, solo cambia si hay actividad — lectura inequívoca de animación. */}
       {reducedMotion ? (
         <svg
           viewBox="0 0 24 24"
@@ -24,7 +27,7 @@ export function MotionToggle() {
           stroke="currentColor"
           strokeWidth="2"
         >
-          <path d="M5 12h14M5 6h14M5 18h14" strokeLinecap="round" />
+          <path d="M6 15h.01M12 15h.01M18 15h.01" strokeLinecap="round" />
         </svg>
       ) : (
         <svg
@@ -35,11 +38,7 @@ export function MotionToggle() {
           stroke="currentColor"
           strokeWidth="2"
         >
-          <circle cx="12" cy="12" r="3" />
-          <path
-            d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"
-            strokeLinecap="round"
-          />
+          <path d="M6 17v-7M12 17V6M18 17v-4" strokeLinecap="round" />
         </svg>
       )}
     </button>

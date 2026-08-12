@@ -6,7 +6,6 @@ import {
   PerformanceMonitor,
 } from "@react-three/drei";
 import { useWebGLSupport } from "@/hooks/useWebGLSupport";
-import { usePrefersReducedMotion } from "@/hooks/usePrefersReducedMotion";
 import { detectInitialTier } from "@/hooks/useDeviceTier";
 import { useSceneStore } from "@/store/useSceneStore";
 import { Hero3D } from "./Hero3D";
@@ -18,10 +17,8 @@ export function SceneCanvas({
   tooltipRef: RefObject<HTMLDivElement | null>;
 }) {
   const webglSupported = useWebGLSupport();
-  const systemReducedMotion = usePrefersReducedMotion();
   const reducedMotion = useSceneStore((s) => s.reducedMotion);
   const tier = useSceneStore((s) => s.tier);
-  const setReducedMotion = useSceneStore((s) => s.setReducedMotion);
   const setTier = useSceneStore((s) => s.setTier);
 
   // El tier heurístico del dispositivo se calcula una sola vez al montar.
@@ -31,20 +28,12 @@ export function SceneCanvas({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  // El store ya nace con el valor correcto de reduced-motion (lectura síncrona
-  // de matchMedia en useSceneStore.ts) — esto solo mantiene el store al día si
-  // el usuario cambia la preferencia del SO mientras la página está abierta.
-  // El toggle manual (MotionToggle) no se pisa: este efecto solo escribe
-  // cuando `systemReducedMotion` cambia de verdad, nunca en cada render.
-  useEffect(() => {
-    setReducedMotion(systemReducedMotion);
-  }, [systemReducedMotion, setReducedMotion]);
-
-  // Importante: el tier NUNCA decide este fallback. En móvil (tier "low") el
+  // Importante: el tier NUNCA decide este fallback, y tampoco la preferencia
+  // `prefers-reduced-motion` del sistema (decisión explícita: el grafo 3D va
+  // animado por defecto en cualquier dispositivo). En móvil (tier "low") el
   // Canvas 3D se sigue montando siempre — solo se reduce el nº de nodos y se
   // desactivan pulsos/bloom (ver GraphRoot.tsx / Effects.tsx). El fallback
-  // estático es exclusivamente para: sin WebGL2, o movimiento reducido
-  // (preferencia del sistema o toggle manual).
+  // estático es exclusivamente para: sin WebGL2, o el toggle manual (MotionToggle).
   if (!webglSupported || reducedMotion) {
     return <Fallback />;
   }

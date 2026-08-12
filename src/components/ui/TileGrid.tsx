@@ -8,7 +8,7 @@ function Tile({ index }: { index: number }) {
   const tint = TINTS[index % TINTS.length];
   return (
     <div
-      className={`grid h-16 w-16 shrink-0 place-items-center rounded-[1.15rem] border border-border bg-bg-raised/70 backdrop-blur-sm transition hover:border-glow/50 ${tint}`}
+      className={`grid h-16 w-16 shrink-0 place-items-center rounded-[1.15rem] border border-border/60 bg-bg-raised/45 backdrop-blur-sm transition hover:border-glow/50 ${tint}`}
     >
       <Glyph className="h-7 w-7" />
     </div>

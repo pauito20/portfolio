@@ -11,7 +11,7 @@ export function Lights() {
       <directionalLight
         position={[-5, -2, -4]}
         intensity={0.35}
-        color="#7b61ff"
+        color="#14b8a6"
       />
 
       {/* Entorno procedural (sin HDR externo, cero peticiones de red): es lo
@@ -39,7 +39,7 @@ export function Lights() {
           <Lightformer
             form="rect"
             intensity={1.1}
-            color="#7b61ff"
+            color="#14b8a6"
             position={[6, -1, 2]}
             scale={[6, 6, 1]}
             rotation={[0, -Math.PI / 2, 0]}

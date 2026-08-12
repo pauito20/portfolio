@@ -52,11 +52,13 @@ export function GraphRoot() {
         rimColor="#7fd4ff"
         radius={0.4}
       />
+      {/* IA: teal — el mismo tono verdoso-azulado del lóbulo izquierdo del
+          degradado real de BC, para quedarse dentro de su gama sin usar violeta. */}
       <NodesInstanced
         nodes={ai}
-        color="#7b61ff"
-        gradientTo="#a78bfa"
-        rimColor="#c4b5fd"
+        color="#14b8a6"
+        gradientTo="#5eead4"
+        rimColor="#7dd3c0"
         radius={0.42}
       />
     </group>

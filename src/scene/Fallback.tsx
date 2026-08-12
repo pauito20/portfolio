@@ -14,7 +14,7 @@ export function Fallback() {
       style={{
         background:
           "radial-gradient(60% 45% at 30% 45%, color-mix(in srgb, #0078d4 28%, transparent), transparent 70%), " +
-          "radial-gradient(55% 45% at 72% 55%, color-mix(in srgb, #7b61ff 28%, transparent), transparent 70%), " +
+          "radial-gradient(55% 45% at 72% 55%, color-mix(in srgb, #14b8a6 28%, transparent), transparent 70%), " +
           "radial-gradient(80% 60% at 50% 100%, color-mix(in srgb, #22d3ee 12%, transparent), transparent 70%)",
       }}
     />

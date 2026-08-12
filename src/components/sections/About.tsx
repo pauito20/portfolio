@@ -29,7 +29,7 @@ export function About({
         </div>
       </Reveal>
       <Reveal delay={0.1}>
-        <div className="mt-10 rounded-xl border border-border bg-bg-raised/70 p-6 backdrop-blur-sm">
+        <div className="mt-10 rounded-xl border border-border/60 bg-bg-raised/40 p-6 backdrop-blur-md">
           <h3 className="text-eyebrow font-semibold tracking-widest text-ink-dim uppercase">
             {t("about.factsTitle")}
           </h3>
@@ -37,11 +37,12 @@ export function About({
             {facts.map((fact) => (
               <li
                 key={fact}
-                className="flex items-start gap-2 text-sm text-ink"
+                className="flex items-start gap-2.5 text-sm text-ink"
               >
-                <span aria-hidden className="mt-0.5 text-glow">
-                  ✦
-                </span>
+                <span
+                  aria-hidden
+                  className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-glow"
+                />
                 {fact}
               </li>
             ))}

@@ -1,9 +1,9 @@
 /** Fuente de verdad del diccionario de UI. en.ts se valida contra este tipo. */
 export const es = {
   meta: {
-    title: "Pau Gargallo Llorens — Business Central & IA aplicada",
+    title: "Pau Gargallo Llorens · Business Central e IA aplicada",
     description:
-      "Analista y arquitecto de software especializado en Microsoft Dynamics 365 Business Central (AL) e IA aplicada a ERP.",
+      "Desarrollador y consultor en Microsoft Dynamics 365 Business Central (AL), con inteligencia artificial aplicada al ERP.",
   },
   nav: {
     about: "Sobre mí",
@@ -17,9 +17,9 @@ export const es = {
     kicker: "Business Central · AL · IA aplicada",
     name: "Pau Gargallo Llorens",
     role: "Desarrollador y consultor en Dynamics 365 Business Central",
-    subrole: "+ IA aplicada a ERP",
+    subrole: "Con especialización en inteligencia artificial aplicada al ERP",
     pitch:
-      "Cuatro años entregando ERP en producción para el sector público español — más de 80 extensiones AL en 8 organismos — y un máster en IA que conecta ese mundo con agentes LLM, MCP y automatización.",
+      "Cuatro años entregando ERP en producción para el sector público español, con más de 80 extensiones AL en 8 organismos, además de un máster en Inteligencia Artificial que conecta ese mundo con agentes LLM, MCP y automatización.",
     ctaProjects: "Ver proyectos",
     ctaContact: "Hablemos",
     ctaCv: "Descargar CV",
@@ -27,15 +27,15 @@ export const es = {
   },
   about: {
     title: "Sobre mí",
-    p1: "Desarrollo y arquitecto soluciones sobre Microsoft Dynamics 365 Business Central en Lãberit desde 2022, con foco en migraciones NAV → BC de ciclo de vida completo para autoridades portuarias y organismos públicos: análisis de personalizaciones C/AL heredadas, reingeniería a extensiones AL, migración de datos y soporte de postproducción.",
+    p1: "Desarrollo y arquitecto soluciones sobre Microsoft Dynamics 365 Business Central en Lãberit desde 2022, con foco en la migración de NAV a Business Central de ciclo de vida completo para autoridades portuarias y organismos públicos: análisis de personalizaciones C/AL heredadas, reingeniería a extensiones AL, migración de datos y soporte de postproducción.",
     p2: "Termino en 2026 un máster en Inteligencia Artificial en la Universidad Europea, centrado en agentes LLM y automatización aplicada a la gestión empresarial: extensibilidad de Copilot, servidores MCP para BC y herramientas de migración asistidas por IA.",
-    p3: "Antes de todo esto, cursé el Grado Superior de Clarinete en el Conservatorio de Castellón en paralelo a la carrera y al trabajo — la misma disciplina de fondo, aplicada a algo muy distinto.",
+    p3: "Antes de todo esto, cursé el Grado Superior de Clarinete en el Conservatorio de Castellón en paralelo a la carrera y al trabajo, la misma disciplina de fondo aplicada a algo muy distinto.",
     factsTitle: "En cifras",
     facts: {
       years: "4 años entregando ERP en producción",
-      extensions: "80+ extensiones AL mantenidas en producción",
+      extensions: "Más de 80 extensiones AL mantenidas en producción",
       orgs: "8 organismos del sector público",
-      cert: "4 certificaciones Microsoft + 4 de Anthropic (Claude API, MCP, Agent Skills)",
+      cert: "4 certificaciones Microsoft y 4 de Anthropic, entre ellas Claude API, MCP y Agent Skills",
     },
   },
   experience: {
@@ -54,8 +54,7 @@ export const es = {
   },
   contact: {
     title: "Hablemos",
-    pitch:
-      "Disponible para nuevas oportunidades — presencial, híbrido o remoto, en España.",
+    pitch: "Disponible para nuevas oportunidades, tanto en España como en remoto.",
     email: "Email",
     linkedin: "LinkedIn",
     location: "Benicàssim, Comunitat Valenciana, España",

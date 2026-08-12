@@ -8,7 +8,7 @@ export const skillGroups: SkillGroup[] = [
       "AL / C-AL",
       "Dynamics 365 Business Central",
       "Dynamics NAV",
-      "Migraciones NAV → BC",
+      "Migración NAV/BC",
       "BC Web Services / APIs",
       "Extensibilidad (Copilot, eventos)",
     ],
@@ -42,6 +42,8 @@ export const skillGroups: SkillGroup[] = [
       "TypeScript",
       "React / Electron",
       "Azure AI / Azure Fundamentals",
+      "Power BI",
+      "Power Apps (básico)",
     ],
   },
 ];

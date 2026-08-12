@@ -46,7 +46,7 @@ export function Footer({
       </Section>
       <footer className="border-t border-border/60 px-6 py-8 text-center text-xs text-ink-dim">
         <p>
-          © {new Date().getFullYear()} {profile.name} — {t("footer.rights")}
+          © {new Date().getFullYear()} {profile.name}. {t("footer.rights")}
         </p>
         <p className="mt-1">{t("footer.builtWith")}</p>
       </footer>

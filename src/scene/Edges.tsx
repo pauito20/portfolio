@@ -5,7 +5,7 @@ import { graphEdges } from "@/data/graph";
 
 const GROUP_COLOR: Record<string, string> = {
   erp: "#0078d4",
-  ai: "#7b61ff",
+  ai: "#14b8a6",
   core: "#22d3ee",
 };
 
